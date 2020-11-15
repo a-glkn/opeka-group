@@ -1,0 +1,152 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #767b84
+
+::selection
+	background-color: $accent
+	color: #fff
+
+*
+	outline: none !important
+	margin: 0
+	padding: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.333
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+
+.header
+	height: 80px
+	width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 100
+	transform: translate(0) 
+	background-color: #fff
+	box-shadow: -1px 3px 4px 0px rgba(0, 0, 0, 0.05)
+	.row	
+		height: 80px
+	.logo
+		width: 76px
+		height: 64px
+		margin: auto 0
+		svg
+			width: 76px
+			height: 64px
+	&__phone-1
+		font-size: 18px
+		margin-top: 18px
+		margin-bottom: 3px
+		a
+			color: #303844
+			text-decoration: none
+			transition: .3s ease
+			&:hover
+				color: $accent
+	&__phone-2
+		font-size: 16px
+		a
+			color: #8a8a8a
+			text-decoration: none
+			transition: .3s ease
+			&:hover
+				color: $accent
+	&__menu
+		display: flex
+		ul
+			display: flex
+			width: 100%
+			margin: 0
+			justify-content: space-between
+			li
+				list-style: none
+				a
+					font-size: 14px
+					color: #2a2a2a
+					text-decoration: none
+					transition: .3s ease
+					display: flex
+					.icon
+						width: 20px
+						height: 20px
+						margin: auto 0
+						margin-right: 10px
+						svg, img
+							width: 20px
+							height: 20px
+					span
+						margin: auto 0
+					&:hover
+						color: $accent
+
+
+.section_product
+	line-height: 1.625
+	img
+		max-width: 100%
+		height: auto
+
+.footer
+	background-color: #f2f7fa
+	padding-bottom: 28px
+	&__copy
+		font-size: 16px
+		color: #666666
+		margin-top: -15px
+	.logo
+		width: 109px
+		height: 91px
+		margin-top: 28px
+		svg
+			width: 109px
+			height: 91px
+	&__phone
+		font-size: 19px
+		text-align: right
+		margin-top: 32px
+		margin-bottom: 58px
+		a
+			color: #303844
+			text-decoration: none
+			transition: .3s ease
+			&:hover
+				color: $accent
+	&__contact
+		text-align: right
+		margin-bottom: 5px
+		a
+			text-decoration: none
+			color: #8a8a8a
+			transition: .3s ease
+			&:hover
+				color: $accent
+	&__menu
+		margin-top: 70px
+		ul
+			display: flex
+			flex-wrap: wrap
+			li
+				width: 33.33%
+				list-style: none
+				text-align: right
+				margin-top: 25px
+				a
+					color: #2a2a2a
+					text-decoration: none
+					transition: .3s ease
+					&:hover
+						color: $accent
+
+@import "media" // Always at the end

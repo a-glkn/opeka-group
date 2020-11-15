@@ -1,0 +1,329 @@
+$default-font: "osnovapro", sans-serif
+$accent: #91bf29
+$text: #000
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px
+$grid-columns: 12
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px)
+
+$gutter: $grid-gutter-width
+
+.bg-blue
+    background-color: #f2f7fa
+
+.btn
+    height: 60px
+    color: #fff
+    border-radius: 30px
+    border: 0
+    background-color: #91bf29
+    min-width: 165px
+    cursor: pointer
+    transition: .3s ease
+    &:hover
+        opacity: 0.8
+    &_blue
+        background-color: #e0ebfa
+        color: #303844
+        &:hover
+            opacity: 1
+            color: #fff
+            background-color: #91bf29
+a.btn
+    display: inline-block
+    line-height: 60px
+    text-decoration: none
+    color: #fff
+.heading
+    color: #303844
+    &_lg
+        font-size: 42px
+
+    &_md
+        font-size: 32px
+
+.section
+    color: #767b84
+    p
+        font-size: 16px
+        line-height: 1.21
+        &.xmd
+            font-size: 18px
+        &.md
+            font-size: 20px
+        &.lg
+            font-size: 23px
+
+
+.intro-slider
+    &__item
+        min-height: 900px
+        background-repeat: no-repeat
+        background-position: calc(50% + 400px) center
+        color: #5a5a5a
+        .heading
+            color: #303844
+            margin-bottom: 0.5em
+        .btn
+            margin-top: .5em
+    
+
+    .slick-arrow
+        width: 31px
+        height: 31px
+        border: 0
+        border-radius: 50%
+        background-color: #fff
+        text-indent: -9999px
+        cursor: pointer
+        position: absolute
+        top: 50%
+        margin-top: -15px
+        transition: .3s ease
+        z-index: 10
+        left: 50%
+        &:after
+            content: ''
+            display: block
+            width: 9px
+            height: 16px
+            background-image: url(../img/arr.png)
+            background-repeat: no-repeat
+            background-position: 0 0
+            position: absolute
+            top: 7px
+        &.slick-prev
+            margin-left: -600px
+            &:after
+                left: 10px
+        &.slick-next
+            right: 100px
+            margin-left: 570px
+            &:after
+                right: 10px
+                transform: rotate(180deg)
+        &:hover
+            background-color: #f2f7fa
+    .slick-dots
+        display: flex
+        justify-content: center
+        height: 20px
+        position: absolute
+        bottom: 110px
+        left: 0
+        width: 100%
+        li
+            width: 20px
+            height: 20px
+            list-style: none
+            margin-left: 8px
+            margin-right: 8px
+            button
+                text-indent: -9999px
+                width: 20px
+                height: 20px
+                border: 0
+                border-radius: 50%
+                background-color: #f2f7fa
+                cursor: pointer
+            &.slick-active
+                button
+                    background-color: #91bf29
+      
+
+.section_scheme
+    .scheme-center
+        width: 314px
+        height: 314px
+        border-radius: 50%
+        background-color: #fff
+        border: 1px solid #f2f7fa
+        display: flex
+        margin: auto
+        position: relative
+        top: -70px
+        svg
+            margin: auto
+    .scheme-item
+        text-align: center
+        font-size: 20px
+        color: #767b84
+        line-height: 1.2
+        &__icon
+            width: 95px
+            height: 95px
+            display: block
+            margin-left: auto
+            margin-right: auto
+            margin-bottom: 25px
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                background-color: #f2f7fa
+                z-index: -1
+            svg
+                width: 95px
+                height: 95px
+        &_top
+            .scheme-item__icon
+                &:after
+                    height: 400px
+                    width: 1px
+                    left: 50%
+                    margin-left: -.5px
+                    top: 100%
+        &_left
+            margin-bottom: 35px
+            .scheme-item__icon
+                &:after
+                    height: 1px
+                    width: 300px
+                    top: 50%
+                    transform-origin: 0 100%
+                    right: -300px
+                    margin-top: -0.5px
+
+        &_right
+            margin-bottom: 35px
+            .scheme-item__icon
+                &:after
+                    height: 1px
+                    width: 300px
+                    top: 50%
+                    transform-origin: right bottom
+                    left: -300px
+                    margin-top: -0.5px
+        &_left-1
+            .scheme-item__icon
+                &:after
+                    transform: rotate(30deg)
+        &_left-3
+            .scheme-item__icon
+                &:after
+                    transform: rotate(-30deg)
+
+        &_right-1
+            .scheme-item__icon
+                &:after
+                    transform: rotate(-30deg)
+        &_right-3
+            .scheme-item__icon
+                &:after
+                    transform: rotate(30deg)
+        &_bottom
+            margin-top: -90px
+            .scheme-item__icon
+                &:after
+                    height: 400px
+                    width: 1px
+                    left: 50%
+                    margin-left: -.5px
+                    top: -400px
+        &_top, &_bottom
+            max-width: 680px
+            margin-left: auto
+            margin-right: auto
+
+        &_left, &_right
+
+
+.menu-toggler
+	width: 29px
+	height: 26px
+	position: relative
+	display: none
+	cursor: pointer
+	i
+		width: 21px
+		height: 2px
+		background-color: $accent
+		position: absolute
+		top: 5px
+		left: 4px
+		transform-origin: top left
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 2px
+			position: absolute
+			top: 7px
+			background-color: $accent
+		&:after
+			content: ''
+			display: block
+			width: 100%
+			height: 2px
+			position: absolute
+			top: 14px
+			background-color: $accent
+   
+
+.menu-openned
+	.menu-toggler
+		i
+			left: 8px
+			transform: rotate(45deg)
+			&:before
+				top: 0
+				transform: rotate(-90deg)
+			&:after
+				display: none
+
+.menu-wrapper
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.04)
+    height: 100%
+    position: fixed
+    top: 60px
+    left: 0
+    width: 100%
+    z-index: 11
+    background-color: #fff
+    display: none
+    &__inner
+        width: 100%
+        display: flex
+        overflow-y: auto
+        .menu
+            margin: auto
+            width: 100%
+            text-align: center
+            li
+                padding-top: 5px
+                padding-bottom: 5px
+                a
+                    text-decoration: none
+                    width: 100%
+                    color: $accent
+
+.menu-openned
+	overflow: hidden
+	.menu-wrapper
+		display: flex
+
+
+.form
+    &__input
+        border: 1px solid #d6dae1
+        border-radius: 8px
+        height: 62px
+        width: 100%
+        padding-left: 20px
+        padding-right: 20px
+        margin-bottom: 28px
+        font-size: 18px
+    &__text
+        width: 100%
+        height: 132px
+        border: 1px solid #d6dae1
+        border-radius: 8px
+        padding-left: 20px
+        padding-right: 20px
+        padding-top: 10px
+        padding-bottom: 10px
+        margin-bottom: 28px
+        font-size: 18px
